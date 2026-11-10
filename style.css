@@ -1,0 +1,166 @@
+/* ==========================================================================
+   1. Dark & Cozy Design Tokens
+   ========================================================================== */
+:root {
+  /* Rich Dark Palette from Manifesto & Logo */
+  --bg-primary: #122324;       /* Deep midnight teal background */
+  --bg-card: #1b3436;          /* Slightly lighter teal for content cards */
+  --bg-accent: #244648;        /* Muted teal accent for elements */
+  --text-main: #fbf7f0;        /* Soft warm cream for main text */
+  --text-muted: #d0c4b4;       /* Muted warm grey-gold for secondary text */
+  --brand-primary: #e68a3e;    /* Warm amber / lantern orange */
+  --brand-hover: #f09f53;      /* Lighter amber on hover */
+  --border-subtle: #2d5457;    /* Deep teal border */
+
+  /* Typography */
+  --font-heading: 'Georgia', 'Times New Roman', serif;
+  --font-body: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Layout Spacing & Structure */
+  --container-width: 850px;
+  --radius-card: 16px;
+  --radius-button: 30px;
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.3);
+  --transition-smooth: all 0.3s ease-in-out;
+}
+
+/* ==========================================================================
+   2. Base & Typography Rules
+   ========================================================================== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
+  padding: 0 1.5rem;
+  min-height: 100vh;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  color: var(--text-main);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: -0.02em;
+  color: var(--brand-primary);
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  margin-bottom: 1.5rem;
+  color: var(--brand-primary);
+}
+
+p {
+  margin-bottom: 1.25rem;
+  color: var(--text-muted);
+}
+
+strong {
+  color: var(--text-main);
+}
+
+/* Navigation */
+.site-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.site-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  transition: var(--transition-smooth);
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--text-main);
+  background-color: var(--bg-accent);
+}
+
+/* Layout */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+
+header {
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+}
+
+.tagline {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+section {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  padding: 3rem 2.5rem;
+  margin-bottom: 3rem;
+  box-shadow: var(--shadow-soft);
+}
+
+/* Grids & Lists */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.card-item {
+  background: var(--bg-accent);
+  padding: 1.75rem;
+  border-radius: calc(var(--radius-card) - 4px);
+  border: 1px solid var(--border-subtle);
+}
+
+.card-item h3 {
+  color: var(--brand-primary);
+  margin-bottom: 0.75rem;
+}
+
+ul {
+  padding-left: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 0 4rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
