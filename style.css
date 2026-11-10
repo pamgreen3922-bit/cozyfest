@@ -219,3 +219,21 @@ footer {
     height: 180px;
   }
 }
+
+  /* Fixed List Alignment (No Bullets) */
+.mood-pillars {
+  list-style-type: none; /* Removes the bullet points */
+  display: inline-block;
+  text-align: left;
+  padding-left: 0; /* Removes left margin where bullets sat */
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.mood-pillars li {
+  margin-bottom: 0.75rem;
+}
+
+.mood-pillars strong {
+  color: #e5a95d;
+}
