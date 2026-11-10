@@ -237,3 +237,10 @@ footer {
 .mood-pillars strong {
   color: #e5a95d;
 }
+
+/* Remove border from top quote card */
+.hero-card,
+.manifesto-hero,
+section:first-of-type {
+  border: none !important;
+}
