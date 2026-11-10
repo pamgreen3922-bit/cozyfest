@@ -179,7 +179,7 @@ footer {
 .hero-banner-wrapper {
   position: relative;
   width: 100%;
-  height: 400px; /* Adjust banner height as desired */
+  height: 280px; /* Adjust banner height as desired */
   overflow: hidden;
 }
 
