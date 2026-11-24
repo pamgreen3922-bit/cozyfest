@@ -244,3 +244,80 @@ footer {
 section:first-of-type {
   border: none !important;
 }
+
+/* ==========================================================================
+   Recipe Card Styles
+   ========================================================================== */
+.recipe-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  padding: 2.5rem;
+  margin-bottom: 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.recipe-header {
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.recipe-header h2 {
+  margin-bottom: 0.75rem;
+}
+
+.recipe-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.recipe-meta strong {
+  color: var(--brand-primary);
+}
+
+.recipe-body {
+  display: grid;
+  grid-template-columns: 1fr 1.25fr;
+  gap: 2.5rem;
+}
+
+.recipe-ingredients h3,
+.recipe-directions h3 {
+  color: var(--brand-primary);
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+}
+
+.recipe-ingredients ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.recipe-ingredients li {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed rgba(208, 196, 180, 0.15);
+}
+
+.recipe-directions ol {
+  padding-left: 1.25rem;
+}
+
+.recipe-directions li {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.recipe-directions li::marker {
+  color: var(--brand-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .recipe-body {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
